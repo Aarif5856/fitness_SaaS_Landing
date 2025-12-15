@@ -2659,6 +2659,14 @@ h6 {
         align-items: center;
     }
 
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
     .footer-logo-img {
         max-width: 140px;
         height: auto;
