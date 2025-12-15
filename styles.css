@@ -1031,7 +1031,8 @@ h6 {
     perspective: 1500px;
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
+    /* Constrain width to keep items closer */
     flex-wrap: wrap;
     /* Safety for smaller screens */
 }
@@ -1050,13 +1051,13 @@ h6 {
     transition: transform 0.5s var(--ease-out);
 }
 
-/* Side mockups with tilt */
+/* Side mockups with tilt - Reduced for better centering */
 .app-showcase-item:first-child .app-showcase-mockup {
-    transform: perspective(1000px) rotateY(12deg) translateX(20px);
+    transform: perspective(1000px) rotateY(10deg);
 }
 
 .app-showcase-item:last-child .app-showcase-mockup {
-    transform: perspective(1000px) rotateY(-12deg) translateX(-20px);
+    transform: perspective(1000px) rotateY(-10deg);
 }
 
 /* Center mockup larger */
