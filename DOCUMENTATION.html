@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse Template - Complete Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: #2d2d2d;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        nav a:hover {
+            border-bottom-color: #8b5cf6;
+        }
+        main {
+            padding: 40px;
+        }
+        section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #6366f1;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+        }
+        h4 {
+            color: #555;
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .alert-info {
+            background: #d1ecf1;
+            border-left-color: #0c5460;
+        }
+        .alert-success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+        .file-tree {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #6366f1;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💪 FitPulse Template</h1>
+            <p>Complete Documentation & User Guide</p>
+        </header>
+        
+        <nav>
+            <a href="#installation">Installation</a>
+            <a href="#structure">File Structure</a>
+            <a href="#customization">Customization</a>
+            <a href="#css-variables">CSS Variables</a>
+            <a href="#features">Features</a>
+            <a href="#support">Support</a>
+        </nav>
+        
+        <main>
+            <!-- Installation Section -->
+            <section id="installation">
+                <h2>📦 Installation Guide</h2>
+                
+                <h3>Method 1: Local Development</h3>
+                <p>To view the template locally on your computer:</p>
+                <ol>
+                    <li>Extract the ZIP file to a folder on your computer</li>
+                    <li>Open the <code>index.html</code> file in any modern web browser</li>
+                    <li>That's it! No build tools or server required</li>
+                </ol>
+                
+                <div class="alert alert-info">
+                    <strong>Tip:</strong> For the best experience, use a local server. You can use Python's built-in server: <code>python -m http.server 8000</code> then visit <code>http://localhost:8000</code>
+                </div>
+                
+                <h3>Method 2: Web Hosting</h3>
+                <p>To deploy to a web server:</p>
+                <ol>
+                    <li>Upload all files to your web hosting via FTP/SFTP or cPanel File Manager</li>
+                    <li>Ensure <code>index.html</code> is in the root directory (or public_html folder)</li>
+                    <li>Maintain the folder structure (especially the <code>public/</code> folder)</li>
+                    <li>Visit your domain to see the live site</li>
+                </ol>
+                
+                <h3>Method 3: Static Hosting Services</h3>
+                <p>This template works perfectly with:</p>
+                <ul>
+                    <li><strong>Vercel:</strong> Connect your GitHub repo or drag & drop the folder</li>
+                    <li><strong>Netlify:</strong> Drag & drop deployment or Git integration</li>
+                    <li><strong>GitHub Pages:</strong> Push to a GitHub repo and enable Pages</li>
+                    <li><strong>Cloudflare Pages:</strong> Connect repository for automatic deployments</li>
+                </ul>
+                
+                <div class="alert alert-success">
+                    <strong>Note:</strong> The template includes a <code>vercel.json</code> configuration file for easy Vercel deployment.
+                </div>
+            </section>
+            
+            <!-- File Structure Section -->
+            <section id="structure">
+                <h2>📁 File Structure</h2>
+                
+                <p>Here's the complete file structure of the template:</p>
+                
+                <div class="file-tree">
+fitpulse-template/
+├── index.html              # Main HTML file (all page content)
+├── styles.css              # All CSS styling (2600+ lines)
+├── script.js               # JavaScript functionality
+├── vercel.json             # Vercel deployment config (optional)
+├── README.md               # Quick start guide
+├── DOCUMENTATION.html      # This file
+│
+├── hero-mockup.png         # Hero section app mockup image
+├── workout-icon.png        # Feature icon for workouts
+├── nutrition-icon.png      # Feature icon for nutrition
+├── progress-icon.png       # Feature icon for progress
+│
+└── public/
+    └── logos/
+        ├── fitpulse_logo.png    # Main brand logo
+        ├── apple-health.svg     # Integration logo
+        ├── fitbit.svg           # Integration logo
+        ├── garmin.svg           # Integration logo
+        └── strava.svg           # Integration logo
+                </div>
+                
+                <h3>File Descriptions</h3>
+                <table>
+                    <tr>
+                        <th>File</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td><code>index.html</code></td>
+                        <td>Main HTML structure. Contains all sections: hero, features, pricing, testimonials, FAQ, footer, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><code>styles.css</code></td>
+                        <td>Complete styling system. Uses CSS variables for easy customization. Includes animations, responsive design, and dark theme.</td>
+                    </tr>
+                    <tr>
+                        <td><code>script.js</code></td>
+                        <td>JavaScript for scroll animations, FAQ accordion functionality, and dynamic content (like current year in footer).</td>
+                    </tr>
+                    <tr>
+                        <td><code>hero-mockup.png</code></td>
+                        <td>App mockup image displayed in the hero section. Replace with your own app screenshot or mockup.</td>
+                    </tr>
+                    <tr>
+                        <td><code>workout-icon.png</code></td>
+                        <td>Icon for workout-related features. Can be replaced with your own icons.</td>
+                    </tr>
+                    <tr>
+                        <td><code>nutrition-icon.png</code></td>
+                        <td>Icon for nutrition-related features.</td>
+                    </tr>
+                    <tr>
+                        <td><code>progress-icon.png</code></td>
+                        <td>Icon for progress tracking features.</td>
+                    </tr>
+                    <tr>
+                        <td><code>public/logos/</code></td>
+                        <td>Folder containing all logo files. Replace <code>fitpulse_logo.png</code> with your brand logo.</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Customization Section -->
+            <section id="customization">
+                <h2>🎨 Customization Guide</h2>
+                
+                <h3>1. Changing Colors</h3>
+                <p>All colors are controlled via CSS variables in <code>styles.css</code>. Open the file and find the <code>:root</code> section at the top.</p>
+                
+                <h4>Primary Colors</h4>
+                <pre><code>:root {
+    /* Primary gradient colors */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --primary-500: #6366f1;
+    --primary-400: #818cf8;
+    --accent-500: #8b5cf6;
+}</code></pre>
+                
+                <p>To change the brand color, update these values. For example, for a blue theme:</p>
+                <pre><code>--gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+--primary-500: #3b82f6;
+--accent-500: #2563eb;</code></pre>
+                
+                <h4>Background Colors</h4>
+                <pre><code>--bg-primary: #09090f;      /* Main background */
+--bg-secondary: #0d0d15;   /* Secondary sections */
+--bg-card: rgba(255, 255, 255, 0.03);  /* Card backgrounds */</code></pre>
+                
+                <h4>Text Colors</h4>
+                <pre><code>--text-primary: #ffffff;                    /* Main text */
+--text-secondary: rgba(255, 255, 255, 0.8);  /* Secondary text */
+--text-tertiary: rgba(255, 255, 255, 0.6);   /* Tertiary text */</code></pre>
+                
+                <h3>2. Changing Fonts</h3>
+                <p>The template uses system fonts by default. To add custom fonts (e.g., Google Fonts):</p>
+                <ol>
+                    <li>Add the font link in <code>index.html</code> <code>&lt;head&gt;</code> section:</li>
+                </ol>
+                <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"&gt;</code></pre>
+                <ol start="2">
+                    <li>Update CSS variables in <code>styles.css</code>:</li>
+                </ol>
+                <pre><code>--font-display: 'Poppins', sans-serif;
+--font-body: 'Poppins', sans-serif;</code></pre>
+                
+                <h3>3. Updating Content</h3>
+                <h4>Text Content</h4>
+                <p>Open <code>index.html</code> and search for the section you want to edit. All text is clearly marked with HTML comments like:</p>
+                <pre><code>&lt;!-- Hero Section --&gt;
+&lt;!-- Features Section --&gt;
+&lt;!-- Pricing Section --&gt;</code></pre>
+                
+                <h4>Logo Replacement</h4>
+                <ol>
+                    <li>Replace <code>public/logos/fitpulse_logo.png</code> with your logo</li>
+                    <li>Keep the same filename OR update the path in <code>index.html</code>:
+                        <pre><code>&lt;img src="public/logos/your-logo.png" alt="Your Brand" class="nav-logo-img"&gt;</code></pre>
+                    </li>
+                    <li>For best results, use a transparent PNG with height around 40-50px</li>
+                </ol>
+                
+                <h4>Images</h4>
+                <ul>
+                    <li><strong>Hero Mockup:</strong> Replace <code>hero-mockup.png</code> with your app screenshot or device mockup (recommended: 1200x800px)</li>
+                    <li><strong>Feature Icons:</strong> Replace <code>workout-icon.png</code>, <code>nutrition-icon.png</code>, <code>progress-icon.png</code> with your own icons</li>
+                    <li><strong>Integration Logos:</strong> Update SVG files in <code>public/logos/</code> if needed</li>
+                </ul>
+                
+                <h3>4. Modifying Sections</h3>
+                <h4>Adding a New Section</h4>
+                <ol>
+                    <li>Copy an existing section structure from <code>index.html</code></li>
+                    <li>Paste it where you want the new section</li>
+                    <li>Update the content and IDs</li>
+                    <li>Add corresponding styles in <code>styles.css</code> (or reuse existing classes)</li>
+                </ol>
+                
+                <h4>Removing a Section</h4>
+                <ol>
+                    <li>Find the section in <code>index.html</code> (look for HTML comments)</li>
+                    <li>Delete the entire <code>&lt;section&gt;</code> block</li>
+                    <li>Remove any navigation links pointing to that section</li>
+                </ol>
+                
+                <h3>5. Updating Links</h3>
+                <p>Update all links in <code>index.html</code>:</p>
+                <ul>
+                    <li><strong>Navigation links:</strong> Update <code>href</code> attributes in the navbar</li>
+                    <li><strong>CTA buttons:</strong> Change "Start Free Trial" button links</li>
+                    <li><strong>Social links:</strong> Update footer social media URLs</li>
+                    <li><strong>Footer links:</strong> Update all footer navigation links</li>
+                </ul>
+            </section>
+            
+            <!-- CSS Variables Section -->
+            <section id="css-variables">
+                <h2>🎯 Complete CSS Variables Reference</h2>
+                
+                <p>All customizable properties are defined as CSS variables. Here's the complete reference:</p>
+                
+                <h3>Color Variables</h3>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default Value</th>
+                        <th>Usage</th>
+                    </tr>
+                    <tr>
+                        <td><code>--gradient-primary</code></td>
+                        <td><code>linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)</code></td>
+                        <td>Primary gradient for buttons, headings, accents</td>
+                    </tr>
+                    <tr>
+                        <td><code>--gradient-accent</code></td>
+                        <td><code>linear-gradient(135deg, #818cf8 0%, #a78bfa 100%)</code></td>
+                        <td>Accent gradient for hover states</td>
+                    </tr>
+                    <tr>
+                        <td><code>--primary-500</code></td>
+                        <td><code>#6366f1</code></td>
+                        <td>Main primary color</td>
+                    </tr>
+                    <tr>
+                        <td><code>--primary-400</code></td>
+                        <td><code>#818cf8</code></td>
+                        <td>Lighter primary variant</td>
+                    </tr>
+                    <tr>
+                        <td><code>--accent-500</code></td>
+                        <td><code>#8b5cf6</code></td>
+                        <td>Accent color</td>
+                    </tr>
+                    <tr>
+                        <td><code>--bg-primary</code></td>
+                        <td><code>#09090f</code></td>
+                        <td>Main background color</td>
+                    </tr>
+                    <tr>
+                        <td><code>--bg-secondary</code></td>
+                        <td><code>#0d0d15</code></td>
+                        <td>Secondary background (sections)</td>
+                    </tr>
+                    <tr>
+                        <td><code>--bg-tertiary</code></td>
+                        <td><code>#11111d</code></td>
+                        <td>Tertiary background</td>
+                    </tr>
+                    <tr>
+                        <td><code>--bg-card</code></td>
+                        <td><code>rgba(255, 255, 255, 0.03)</code></td>
+                        <td>Card background</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-primary</code></td>
+                        <td><code>#ffffff</code></td>
+                        <td>Main text color</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-secondary</code></td>
+                        <td><code>rgba(255, 255, 255, 0.8)</code></td>
+                        <td>Secondary text color</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-tertiary</code></td>
+                        <td><code>rgba(255, 255, 255, 0.6)</code></td>
+                        <td>Tertiary text color</td>
+                    </tr>
+                </table>
+                
+                <h3>Typography Variables</h3>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default Value</th>
+                        <th>Usage</th>
+                    </tr>
+                    <tr>
+                        <td><code>--font-display</code></td>
+                        <td><code>'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif</code></td>
+                        <td>Font for headings and display text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--font-body</code></td>
+                        <td><code>'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif</code></td>
+                        <td>Font for body text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-xs</code></td>
+                        <td><code>0.75rem</code></td>
+                        <td>Extra small text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-sm</code></td>
+                        <td><code>0.875rem</code></td>
+                        <td>Small text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-base</code></td>
+                        <td><code>1.125rem</code></td>
+                        <td>Base body text size</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-lg</code></td>
+                        <td><code>1.25rem</code></td>
+                        <td>Large text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-xl</code></td>
+                        <td><code>1.5rem</code></td>
+                        <td>Extra large text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-2xl</code></td>
+                        <td><code>1.875rem</code></td>
+                        <td>2XL text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-3xl</code></td>
+                        <td><code>2.25rem</code></td>
+                        <td>3XL text</td>
+                    </tr>
+                    <tr>
+                        <td><code>--text-4xl</code></td>
+                        <td><code>3rem</code></td>
+                        <td>4XL text (large headings)</td>
+                    </tr>
+                </table>
+                
+                <h3>Spacing Variables</h3>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default Value</th>
+                        <th>Usage</th>
+                    </tr>
+                    <tr>
+                        <td><code>--container-max</code></td>
+                        <td><code>1200px</code></td>
+                        <td>Maximum container width</td>
+                    </tr>
+                    <tr>
+                        <td><code>--section-y</code></td>
+                        <td><code>100px</code></td>
+                        <td>Standard section vertical padding</td>
+                    </tr>
+                    <tr>
+                        <td><code>--section-y-compact</code></td>
+                        <td><code>80px</code></td>
+                        <td>Compact section padding</td>
+                    </tr>
+                    <tr>
+                        <td><code>--section-y-hero</code></td>
+                        <td><code>120px</code></td>
+                        <td>Hero section padding</td>
+                    </tr>
+                </table>
+                
+                <h3>Border Radius Variables</h3>
+                <table>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default Value</th>
+                        <th>Usage</th>
+                    </tr>
+                    <tr>
+                        <td><code>--radius-sm</code></td>
+                        <td><code>8px</code></td>
+                        <td>Small border radius</td>
+                    </tr>
+                    <tr>
+                        <td><code>--radius-md</code></td>
+                        <td><code>12px</code></td>
+                        <td>Medium border radius</td>
+                    </tr>
+                    <tr>
+                        <td><code>--radius-lg</code></td>
+                        <td><code>16px</code></td>
+                        <td>Large border radius</td>
+                    </tr>
+                    <tr>
+                        <td><code>--radius-xl</code></td>
+                        <td><code>20px</code></td>
+                        <td>Extra large border radius</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Features Section -->
+            <section id="features">
+                <h2>✨ Template Features</h2>
+                
+                <h3>Design Features</h3>
+                <ul>
+                    <li><strong>Fully Responsive:</strong> Optimized for desktop, tablet, and mobile devices</li>
+                    <li><strong>Dark Theme:</strong> Modern dark aesthetic with gradient accents</li>
+                    <li><strong>Glassmorphism Effects:</strong> Subtle glass-like card effects</li>
+                    <li><strong>Smooth Animations:</strong> Scroll-triggered fade-in animations</li>
+                    <li><strong>Premium Typography:</strong> Clean, readable font hierarchy</li>
+                </ul>
+                
+                <h3>Technical Features</h3>
+                <ul>
+                    <li><strong>Pure HTML/CSS/JS:</strong> No frameworks or build tools required</li>
+                    <li><strong>CSS Variables:</strong> Easy customization through custom properties</li>
+                    <li><strong>Semantic HTML5:</strong> Clean, accessible markup structure</li>
+                    <li><strong>SEO Optimized:</strong> Proper meta tags and semantic structure</li>
+                    <li><strong>Cross-browser Compatible:</strong> Works in all modern browsers</li>
+                    <li><strong>Fast Loading:</strong> Optimized CSS and minimal JavaScript</li>
+                </ul>
+                
+                <h3>Included Sections</h3>
+                <ol>
+                    <li><strong>Hero Section:</strong> Eye-catching header with CTA buttons and app mockup</li>
+                    <li><strong>Features Grid:</strong> 6 feature cards with icons and descriptions</li>
+                    <li><strong>App Preview:</strong> Two-column layout showing app features</li>
+                    <li><strong>About Section:</strong> Company narrative with statistics</li>
+                    <li><strong>Why Choose Section:</strong> Key differentiators and benefits</li>
+                    <li><strong>Pricing Table:</strong> 3 pricing tiers with highlighted "Pro" plan</li>
+                    <li><strong>Testimonials:</strong> Customer reviews and social proof</li>
+                    <li><strong>FAQ Accordion:</strong> Expandable FAQ section</li>
+                    <li><strong>Developer Section:</strong> Highlights code quality and customization</li>
+                    <li><strong>Newsletter Signup:</strong> Email subscription form</li>
+                    <li><strong>Footer:</strong> Links, social icons, and company info</li>
+                </ol>
+            </section>
+            
+            <!-- Support Section -->
+            <section id="support">
+                <h2>🆘 Support & Help</h2>
+                
+                <h3>Getting Help</h3>
+                <p>If you encounter any issues or have questions about customizing the template:</p>
+                <ul>
+                    <li>Check this documentation first - most common questions are answered here</li>
+                    <li>Review the code comments in <code>index.html</code> and <code>styles.css</code></li>
+                    <li>Inspect the browser's developer tools (F12) to see how styles are applied</li>
+                </ul>
+                
+                <h3>Common Issues & Solutions</h3>
+                
+                <h4>Images Not Displaying</h4>
+                <ul>
+                    <li>Check that image file paths are correct (case-sensitive on some servers)</li>
+                    <li>Ensure images are in the correct folders</li>
+                    <li>Verify image file names match exactly (including extensions)</li>
+                </ul>
+                
+                <h4>Styles Not Applying</h4>
+                <ul>
+                    <li>Clear browser cache (Ctrl+F5 or Cmd+Shift+R)</li>
+                    <li>Check that <code>styles.css</code> is linked correctly in <code>index.html</code></li>
+                    <li>Verify CSS syntax is correct (no unclosed brackets)</li>
+                </ul>
+                
+                <h4>JavaScript Not Working</h4>
+                <ul>
+                    <li>Open browser console (F12) to check for JavaScript errors</li>
+                    <li>Ensure <code>script.js</code> is linked before closing <code>&lt;/body&gt;</code> tag</li>
+                    <li>Check that jQuery or other dependencies aren't required (this template uses vanilla JS)</li>
+                </ul>
+                
+                <h4>Responsive Issues</h4>
+                <ul>
+                    <li>Test on actual devices, not just browser resize</li>
+                    <li>Check viewport meta tag is present: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+                    <li>Verify media queries in <code>styles.css</code> are correct</li>
+                </ul>
+                
+                <h3>Browser Compatibility</h3>
+                <p>This template is tested and works in:</p>
+                <ul>
+                    <li>Chrome (latest)</li>
+                    <li>Firefox (latest)</li>
+                    <li>Safari (latest)</li>
+                    <li>Edge (latest)</li>
+                    <li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+                </ul>
+                
+                <div class="alert">
+                    <strong>Note:</strong> Some older browsers (Internet Explorer) are not supported. The template uses modern CSS features that require up-to-date browsers.
+                </div>
+            </section>
+            
+            <!-- Author Section -->
+            <section id="author">
+                <h2>👨‍💻 About the Author</h2>
+                
+                <p><strong>Template Name:</strong> FitPulse Landing Page Template</p>
+                <p><strong>Version:</strong> 1.0</p>
+                <p><strong>Created:</strong> 2025</p>
+                <p><strong>License:</strong> Commercial License - Personal and commercial use allowed</p>
+                
+                <h3>Template Specifications</h3>
+                <ul>
+                    <li><strong>Framework:</strong> None (Pure HTML/CSS/JS)</li>
+                    <li><strong>Build Tools:</strong> None required</li>
+                    <li><strong>Dependencies:</strong> None</li>
+                    <li><strong>Browser Support:</strong> Modern browsers (Chrome, Firefox, Safari, Edge)</li>
+                    <li><strong>Responsive:</strong> Yes (Mobile, Tablet, Desktop)</li>
+                    <li><strong>Documentation:</strong> Included (this file)</li>
+                </ul>
+                
+                <h3>Credits</h3>
+                <ul>
+                    <li><strong>Icons:</strong> SVG icons included inline in HTML</li>
+                    <li><strong>Fonts:</strong> System font stack (Inter fallback)</li>
+                    <li><strong>Images:</strong> Placeholder images included</li>
+                </ul>
+                
+                <div class="alert alert-info">
+                    <strong>Important:</strong> All placeholder content (statistics, testimonials, company information) should be replaced with actual data before using in production.
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer style="text-align: center; padding: 40px; background: #f8f9fa; margin-top: 50px;">
+                <p style="color: #666;">© 2025 FitPulse Template. All rights reserved.</p>
+                <p style="color: #999; font-size: 0.9em; margin-top: 10px;">Thank you for using FitPulse! 🚀</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
+
