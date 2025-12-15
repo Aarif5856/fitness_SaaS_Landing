@@ -2919,64 +2919,66 @@ h6 {
    UTILITY CLASSES
    =================================== */
 .text-center {
+    text-align: center;
+}
 
-    .text-left {
-        text-align: left;
-    }
+.text-left {
+    text-align: left;
+}
 
-    .text-right {
-        text-align: right;
-    }
+.text-right {
+    text-align: right;
+}
 
-    .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .mt-0 {
-        margin-top: 0;
-    }
+.mt-0 {
+    margin-top: 0;
+}
 
-    .mb-0 {
-        margin-bottom: 0;
-    }
+.mb-0 {
+    margin-bottom: 0;
+}
 
-    .flex {
-        display: flex;
-    }
+.flex {
+    display: flex;
+}
 
-    .flex-col {
-        flex-direction: column;
-    }
+.flex-col {
+    flex-direction: column;
+}
 
-    .items-center {
-        align-items: center;
-    }
+.items-center {
+    align-items: center;
+}
 
-    .justify-center {
-        justify-content: center;
-    }
+.justify-center {
+    justify-content: center;
+}
 
-    .gap-4 {
-        gap: 16px;
-    }
+.gap-4 {
+    gap: 16px;
+}
 
-    .gap-8 {
-        gap: 32px;
-    }
+.gap-8 {
+    gap: 32px;
+}
 
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
 
-    .block {
-        display: block;
-    }
+.block {
+    display: block;
+}
 
-    .relative {
-        position: relative;
-    }
+.relative {
+    position: relative;
+}
 
-    .overflow-hidden {
-        overflow: hidden;
-    }
+.overflow-hidden {
+    overflow: hidden;
+}
