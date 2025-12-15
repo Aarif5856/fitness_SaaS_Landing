@@ -1447,7 +1447,7 @@ h6 {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 60px auto 0;
 }
 
 .pricing-card {
