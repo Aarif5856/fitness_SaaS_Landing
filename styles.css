@@ -1031,10 +1031,10 @@ h6 {
     perspective: 1500px;
     width: 100%;
     margin: 0 auto;
-    max-width: 1000px;
-    /* Constrain width to keep items closer */
+    /* Removed max-width to ensure full centering within container */
+    max-width: 100%;
     flex-wrap: wrap;
-    /* Safety for smaller screens */
+    padding: 0;
 }
 
 .app-showcase-item {
