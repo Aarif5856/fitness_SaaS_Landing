@@ -2756,12 +2756,14 @@ h6 {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
     }
 
     .footer-brand {
-        grid-column: span 1;
+        grid-column: span 2;
+        max-width: none;
+        margin: 0 auto;
     }
 
     .footer-newsletter {
@@ -2776,6 +2778,8 @@ h6 {
         flex-direction: column;
         text-align: center;
         gap: 24px;
+        padding-top: 24px;
+        margin-top: 24px;
     }
 
     .footer-legal {
@@ -2789,6 +2793,17 @@ h6 {
     .container {
         padding: 0 16px;
     }
+
+    /* Force single column for footer on very small screens */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-brand {
+        grid-column: span 1;
+    }
+
 
     .hero-title {
         font-size: var(--text-3xl);
